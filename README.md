@@ -33,10 +33,13 @@ docker run -d --name='pai' --net='bridge' --privileged \
 	      MQTT_PASSWORD - MQTT Password
               /tmp - preferred location on the host
 <p>
-Requires a configured MQTT server to run. There are many other options that can be tweaked - check */tmp/pai/config/pai/config/defaults.py* for options and add these options to be changed to */tmp/pai/config/pai/config/user.py*. Restart pai with:
+Requires a configured MQTT server to run. There are many other options that can be tweaked - check /tmp/pai/config/pai/config/defaults.py for options and add these options to be changed to /tmp/pai/config/pai/config/user.py. Restart pai with:
+
 ```
 docker exec pai /usr/bin/supervisorctl restart pai
 ```
-<br>
-This is the first version of this image and loads will probably still change. The aim is to have a working container for my usecase, so YMMV and you will probably need to make some changes. This image is created to run on an Unraid server. For the unraid config, see https://github.com/jakezp/unraid-docker-templates/tree/master/jakezp/pai.xml
+
+This is the first version of this image and loads will probably still change. The aim is to have a working container for my usecase, so YMMV and you will probably need to make some changes. 
+
+This image is created to run on an Unraid server. For the unraid config, see https://github.com/jakezp/unraid-docker-templates/tree/master/jakezp/pai.xml
 
