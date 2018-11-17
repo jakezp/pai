@@ -24,14 +24,14 @@ docker run -d --name='pai' --net='bridge' --privileged \
 	pai
 ```
 ## Change:
-              IP_CONNECTION_HOST - IP Module address
-	      IP_CONNECTION_PASSWORD - IP Module password
-	      IP_CONNECTION_SITEID - IF defined, connection will be made through this method (not 100% sure where / if / how this is used)
-	      IP_CONNECTION_EMAIL - Email registered in the site
-              MQTT_HOST - MQTT hostname or IP - Hostname or address
-	      MQTT_USERNAME - MQTT Username
-	      MQTT_PASSWORD - MQTT Password
-              /tmp - preferred location on the host
+	IP_CONNECTION_HOST - IP Module address
+	IP_CONNECTION_PASSWORD - IP Module password
+	IP_CONNECTION_SITEID - IF defined, connection will be made through this method (not 100% sure how this is used)
+	IP_CONNECTION_EMAIL - Email registered in the site
+	MQTT_HOST - MQTT hostname or IP - Hostname or address
+	MQTT_USERNAME - MQTT Username
+	MQTT_PASSWORD - MQTT Password
+	/tmp - preferred location on the host
 <p>
 Requires a configured MQTT server to run. There are many other options that can be tweaked - check /tmp/pai/config/pai/config/defaults.py for options and add these options to be changed to /tmp/pai/config/pai/config/user.py. Restart pai with:
 
