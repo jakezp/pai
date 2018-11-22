@@ -27,7 +27,7 @@ ADD run.sh /run.sh
 RUN chmod +x /run.sh
 
 # Expose volumes & ports
-VOLUME ["/var/spool/cron/crontabs", "/root"]
+VOLUME ["/var/spool/cron/crontabs", "/opt/paradox"]
 # EXPOSE 80 443
 
 WORKDIR /root/
