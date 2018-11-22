@@ -7,6 +7,7 @@ if [[ -f /opt/paradox/config/user.py ]]; then
   git clone https://github.com/jpbarraca/pai.git /opt/paradox
   pip3 install -r /opt/paradox/requirements.txt
   mv /root/user.py /opt/paradox/config/user.py
+  mkdir -p /opt/paradox/logs/
 else
   rm -rf /opt/paradox
   git clone https://github.com/jpbarraca/pai.git /opt/paradox
