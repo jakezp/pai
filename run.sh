@@ -60,5 +60,6 @@ touch /etc/crontab /etc/cron.d/* /var/spool/cron/crontabs/* /var/log/cron.log
 chmod 0600 /var/spool/cron/crontabs/root
 
 # Use supervisord to start all processes
+sleep 20
 echo -e "Starting supervisord"
 supervisord -c /etc/supervisor/conf.d/supervisord.conf
