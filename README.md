@@ -1,6 +1,6 @@
-# Paradox Alarm Interface for Magellan - test docker container
+# Paradox Alarm Interface for Magellan - created by jpbarraca (https://github.com/jpbarraca/pai)
 
-Paradox Alarm Interface for Magellan created by jpbarraca (https://github.com/jpbarraca/pai). Middleware that aims to connect to a Paradox Alarm panel, exposing the interface for monitoring and control via several technologies. With this interface it is possible to integrate Paradox panels with HomeAssistant, OpenHAB, Homebridge or other domotics system that supports MQTT, as well as several IM methods.
+Paradox Alarm Interface for Magellan created by jpbarraca (https://github.com/jpbarraca/pai).<br> Middleware that aims to connect to a Paradox Alarm panel, exposing the interface for monitoring and control via several technologies. With this interface it is possible to integrate Paradox panels with HomeAssistant, OpenHAB, Homebridge or other domotics system that supports MQTT, as well as several IM methods.
 <br>
 I've created the docker image to automate installation and running in direct IP connection with MQTT enabled. The application is started and managed by supervisor.
 <br>
