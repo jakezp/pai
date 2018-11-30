@@ -61,12 +61,12 @@ touch /etc/crontab /etc/cron.d/* /var/spool/cron/crontabs/* /var/log/cron.log
 chmod 0600 /var/spool/cron/crontabs/root
 
 # Temp fix to enable support for home-assistant
-sed -i 's/DISARMED/disarmed/g' /opt/paradox/paradox/interfaces/intmqtt_interface.py; 
-sed -i 's/DISARM/disarmed/g' /opt/paradox/paradox/interfaces/intmqtt_interface.py; 
-sed -i 's/NIGHT_ARM/armed_sleep/g' /opt/paradox/paradox/interfaces/intmqtt_interface.py; 
-sed -i 's/AWAY_ARM/armed_away/g' /opt/paradox/paradox/interfaces/intmqtt_interface.py; 
-sed -i 's/STAY_ARM/armed_home/g' /opt/paradox/paradox/interfaces/intmqtt_interface.py; 
-sed -i 's/ALARM_TRIGGERED/triggered/g' /opt/paradox/paradox/interfaces/intmqtt_interface.py
+sed -i 's/DISARMED/disarmed/g' /opt/paradox/paradox/interfaces/mqtt_interface.py; 
+sed -i 's/DISARM/disarmed/g' /opt/paradox/paradox/interfaces/mqtt_interface.py; 
+sed -i 's/NIGHT_ARM/armed_sleep/g' /opt/paradox/paradox/interfaces/mqtt_interface.py; 
+sed -i 's/AWAY_ARM/armed_away/g' /opt/paradox/paradox/interfaces/mqtt_interface.py; 
+sed -i 's/STAY_ARM/armed_home/g' /opt/paradox/paradox/interfaces/mqtt_interface.py; 
+sed -i 's/ALARM_TRIGGERED/triggered/g' /opt/paradox/paradox/interfaces/mqtt_interface.py
 
 # Use supervisord to start all processes
 echo -e "Starting supervisord"
