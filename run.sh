@@ -61,6 +61,8 @@ touch /etc/crontab /etc/cron.d/* /var/spool/cron/crontabs/* /var/log/cron.log
 chmod 0600 /var/spool/cron/crontabs/root
 
 # Temp fix to enable support for home-assistant
+sed -i "s/ARM_AWAY='arm'.*/armed_home='arm_stay', armed_away='arm', armed_sleep='arm_sleep', disarmed='disarm')/g" /opt/paradox/paradox/interfaces/mqtt_interface.py
+sed -i "s/alarm='triggered', stay_arm='armed_away', arm='armed_away', sleep_arm='armed_home', disarm='disarmed')/alarm='triggered', stay_arm='armed_home', arm='armed_away', sleep_arm='armed_sleep', disarm='disarmed')/g" /opt/paradox/paradox/interfaces/mqtt_interface.py
 #sed -i 's/DISARMED/disarmed/g' /opt/paradox/paradox/interfaces/mqtt_interface.py; 
 #sed -i 's/DISARM/disarmed/g' /opt/paradox/paradox/interfaces/mqtt_interface.py; 
 #sed -i 's/NIGHT_ARM/armed_sleep/g' /opt/paradox/paradox/interfaces/mqtt_interface.py; 
